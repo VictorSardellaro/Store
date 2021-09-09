@@ -2,38 +2,43 @@ using System;
 
 namespace Store.Domain.StoreContext
 {
+    public interface IPerson
+    {
+        public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
+
+
+        void OnRegister();
+    }
+
+    public interface IEmployee
+    {
+        public decimal Salary { get; set; }
+
+    }
     public abstract class Person
     {
         public string Name { get; set; }
         public DateTime BirthDate { get; set; }
         public decimal Salary { get; set; }
     }
-    public class Customer : Person
+    public class Customer : IPerson, IEmployee
     {
-        // Propriedades
+        public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
+        public decimal Salary { get; set; }
 
-
-        // Metodos
-        public void Register() { }
-
-
-        // Eventos
-        public void AoRegistar() { }
-    }
-
-    public class SalesMan : Person
-    {
-
-    }
-
-    public class Teste
-    {
-        public Teste()
+        public void OnRegister()
         {
 
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
+
 }
 
 
