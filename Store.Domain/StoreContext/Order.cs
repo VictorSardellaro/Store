@@ -1,10 +1,9 @@
 namespace Store.Domain.StoreContext
 {
-    public class Customer
+    public class Order
     {
 
     }
 
 }
-
 
