@@ -10,7 +10,6 @@ namespace Store.Domain.StoreContext.Entities
 
         public Customer(
         Name name,
-        string lastName,
         Document document,
         Email email,
         string phone)
