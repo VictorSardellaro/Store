@@ -1,6 +1,8 @@
+using FluentValidator;
+
 namespace Store.Domain.StoreContext.Entities
 {
-    public class Product
+    public class Product : Notifiable
     {
         public Product(
             string title,
