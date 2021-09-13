@@ -38,6 +38,15 @@ namespace Store.Tests
             // Realizei o pedido
             order.Place();
 
+            // Simular o pagamento
+            order.Pay();
+
+            // Simular o envio
+            order.Ship();
+
+            // // Simular o cancelamento
+            order.Cancel();
+
         }
 
 
