@@ -59,14 +59,14 @@ namespace Store.Domain.StoreContext.Entities
             // A cada 5 produtos é uma entrega
             var deliveries = new List<Delivery>();
             // deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
-            var count = 1;
+            var count = 0;
 
             // Quebra as entregas
             foreach (var item in _items)
             {
                 if (count == 5)
                 {
-                    count = 1;
+                    count = 0;
                     deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
                 }
                 count++;

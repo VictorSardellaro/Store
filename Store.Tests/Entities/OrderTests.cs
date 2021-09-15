@@ -91,6 +91,8 @@ namespace Store.Tests
             _order.AddItem(_mouse, 1);
             _order.AddItem(_mouse, 1);
             _order.AddItem(_mouse, 1);
+
+
             _order.Ship();
 
             Assert.AreEqual(2, _order.Deliveries.Count);
