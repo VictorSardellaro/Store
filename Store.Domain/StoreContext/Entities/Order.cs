@@ -58,10 +58,10 @@ namespace Store.Domain.StoreContext.Entities
         {
             // A cada 5 produtos é uma entrega
             var deliveries = new List<Delivery>();
-            deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
+            // deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
             var count = 1;
 
-            // quebra as estregas
+            // Quebra as entregas
             foreach (var item in _items)
             {
                 if (count == 5)
