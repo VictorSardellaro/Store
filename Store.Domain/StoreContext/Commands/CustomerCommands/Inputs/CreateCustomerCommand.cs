@@ -1,9 +1,10 @@
 using FluentValidator;
 using FluentValidator.Validation;
+using Store.Shared.Commands;
 
 namespace Store.Domain.StoreContext.CustomerCommands.Inputs
 {
-    public class CreateCustomerCommand : Notifiable
+    public class CreateCustomerCommand : Notifiable, ICommand
     {
         // FailFastValidation
 
