@@ -26,7 +26,7 @@ namespace Store.Domain.StoreContext.CustomerCommands.Inputs
                     .IsEmail(Email, "Email", "O E-mail é inválido")
                     .HasLen(Document, 11, "Document", "CPF inválido")
             );
-            return Valid();
+            return IsValid;
         }
 
         // Se o usuario existe no banco (Email)
