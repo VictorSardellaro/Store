@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using Store.Domain.StoreContext.Entities;
-//using Store.Domain.StoreContext.Queries;
+using Store.Domain.StoreContext.Queries;
 using Store.Domain.StoreContext.Repositories;
 using Store.Infra.StoreContext.DataContexts;
 using Dapper;
@@ -44,7 +44,7 @@ namespace Store.Infra.StoreContext.Repositories
                 .FirstOrDefault();
         }
 
-        /* public IEnumerable<ListCustomerQueryResult> Get()
+        public IEnumerable<ListCustomerQueryResult> Get()
         {
             return
                 _context
@@ -78,7 +78,7 @@ namespace Store.Infra.StoreContext.Repositories
                 _context
                 .Connection
                 .Query<ListCustomerOrdersQueryResult>("", new { id = id });
-        } */
+        }
 
         public void Save(Customer customer)
         {
