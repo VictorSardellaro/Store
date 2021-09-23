@@ -3,6 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Store.Domain.StoreContext.Repositories;
+using Store.Domain.StoreContext.Services;
+using Store.Infra.StoreContext.DataContexts;
+using Store.Infra.StoreContext.Repositories;
+using Store.Infra.StoreContext.Services;
 
 namespace Store.Api
 {
@@ -14,6 +19,10 @@ namespace Store.Api
         {
             // https://stackoverflow.com/questions/57684093/using-usemvc-to-configure-mvc-is-not-supported-while-using-endpoint-routing
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            services.AddScoped<DataContext, DataContext>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
