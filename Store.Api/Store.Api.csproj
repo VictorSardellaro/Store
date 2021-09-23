@@ -3,11 +3,12 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0"/>
-    <PackageReference Include="FluentValidator" Version="2.0.2"/>
+    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="FluentValidator" Version="2.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj"/>
-    <ProjectReference Include="..\Store.Shared\Store.Shared.csproj"/>
+    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj" />
+    <ProjectReference Include="..\Store.Shared\Store.Shared.csproj" />
+    <ProjectReference Include="..\Store.Infra\Store.Infra.csproj" />
   </ItemGroup>
 </Project>
