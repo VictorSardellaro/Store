@@ -4,11 +4,14 @@ namespace Store.Api.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         [Route("")]
-        public string Get()
+        // [Route("Clientes")] // Listar todos os clientes
+        // [Route("Clientes/2587")] // Listar o Cliente 2587
+        // [Route("Clientes/2587/pedidos")] // Pedidos do cliente 2587
+        public object Get()
         {
-            return "Hello World";
+            return new { version = "Version 0.0.1" };
         }
-
     }
 }
