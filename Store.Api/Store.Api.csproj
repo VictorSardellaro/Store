@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0" />
-  </ItemGroup> 
-
+    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0"/>
+    <PackageReference Include="FluentValidator" Version="2.0.2"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj"/>
+    <ProjectReference Include="..\Store.Shared\Store.Shared.csproj"/>
+  </ItemGroup>
 </Project>
