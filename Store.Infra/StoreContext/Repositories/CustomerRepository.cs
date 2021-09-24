@@ -78,6 +78,7 @@ namespace Store.Infra.StoreContext.Repositories
                 _context
                 .Connection
                 .Query<ListCustomerOrdersQueryResult>("", new { id = id });
+
         }
 
         public void Save(Customer customer)
