@@ -3,7 +3,6 @@ using System.Data;
 using System.Data.SqlClient;
 using Store.Shared;
 
-
 namespace Store.Infra.StoreContext.DataContexts
 {
     public class DataContext : IDisposable
