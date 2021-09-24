@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Store.Api.Controllers
@@ -12,6 +13,14 @@ namespace Store.Api.Controllers
         public object Get()
         {
             return new { version = "Version 0.0.1" };
+        }
+
+        [HttpGet]
+        [Route("error")]
+        public string Error()
+        {
+            throw new Exception("Algum erro ocorreu");
+            return "erro";
         }
     }
 }
