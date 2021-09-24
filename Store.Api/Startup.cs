@@ -17,8 +17,11 @@ namespace Store.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
             // https://stackoverflow.com/questions/57684093/using-usemvc-to-configure-mvc-is-not-supported-while-using-endpoint-routing
             services.AddMvc(options => options.EnableEndpointRouting = false);
+
+            services.AddResponseCompression();
 
             services.AddScoped<DataContext, DataContext>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
@@ -34,6 +37,8 @@ namespace Store.Api
             }
 
             app.UseMvc();
+
+            app.UseResponseCompression();
 
             // app.UseRouting();
 
