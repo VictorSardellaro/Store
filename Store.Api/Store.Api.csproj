@@ -3,12 +3,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="FluentValidator" Version="2.0.2" />
+    <PackageReference Include="elmah.io.aspnetcore" Version="4.0.30"/>
+    <PackageReference Include="microsoft.AspNetCore" Version="2.2.0"/>
+    <PackageReference Include="FluentValidator" Version="2.0.2"/>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-rc.1.21451.13"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj" />
-    <ProjectReference Include="..\Store.Shared\Store.Shared.csproj" />
-    <ProjectReference Include="..\Store.Infra\Store.Infra.csproj" />
+    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj"/>
+    <ProjectReference Include="..\Store.Shared\Store.Shared.csproj"/>
+    <ProjectReference Include="..\Store.Infra\Store.Infra.csproj"/>
   </ItemGroup>
 </Project>
