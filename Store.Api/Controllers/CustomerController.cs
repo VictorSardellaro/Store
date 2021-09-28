@@ -25,8 +25,7 @@ namespace Store.Api.Controllers
 
         [HttpGet]
         [Route("v1/customers")]
-        [ResponseCache(Duration = 60)]
-        // Cache-Control: public, max-age=60
+        [ResponseCache(Duration = 15)]
         public IEnumerable<ListCustomerQueryResult> Get()
         {
             return _repository.Get();
@@ -40,11 +39,17 @@ namespace Store.Api.Controllers
         }
 
         [HttpGet]
+        [Route("v2/customers/{document}")]
+        public GetCustomerQueryResult GetByDocument(Guid document)
+        {
+            return _repository.Get(document);
+        }
+
+        [HttpGet]
         [Route("v1/customers/{id}/orders")]
         public IEnumerable<ListCustomerOrdersQueryResult> GetOrders(Guid id)
         {
             return _repository.GetOrders(id);
-
         }
 
         [HttpPost]
