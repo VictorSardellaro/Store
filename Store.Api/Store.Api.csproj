@@ -3,7 +3,6 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="elmah.io.aspnetcore" Version="4.0.30"/>
     <PackageReference Include="microsoft.AspNetCore" Version="2.2.0"/>
     <PackageReference Include="FluentValidator" Version="2.0.2"/>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0"/>

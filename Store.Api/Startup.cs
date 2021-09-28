@@ -9,7 +9,6 @@ using Store.Infra.StoreContext.DataContexts;
 using Store.Infra.StoreContext.Repositories;
 using Store.Infra.StoreContext.Services;
 using Swashbuckle.AspNetCore.Swagger;
-using Elmah.Io.AspNetCore;
 using System;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -46,11 +45,11 @@ namespace Store.Api
                 x.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
-            services.AddElmahIo(o =>
-            {
-                o.ApiKey = "00a64c27562c43c7ab9825822c513120";
-                o.LogId = new Guid("434c4965-a857-4a4b-ae6a-62159cfd15de");
-            });
+            // services.AddElmahIo(o =>
+            // {
+            //     o.ApiKey = "00a64c27562c43c7ab9825822c513120";
+            //     o.LogId = new Guid("434c4965-a857-4a4b-ae6a-62159cfd15de");
+            // });
 
             Settings.ConnectionString = $"{Configuration["connectionString"]}";
 
@@ -71,7 +70,7 @@ namespace Store.Api
             x.SwaggerEndpoint("/swagger/v1/swagger.json", "Store - V1")
             );
 
-            app.UseElmahIo();
+            //app.UseElmahIo();
 
             // app.UseRouting();
 
